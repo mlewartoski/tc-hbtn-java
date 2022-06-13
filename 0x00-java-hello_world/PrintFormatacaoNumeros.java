@@ -5,8 +5,7 @@ public class PrintFormatacaoNumeros {
     public static void main(String[] args) {
         float taxa = 0.2456f;
         float valor = 7654.321f;
-        Locale brasil = new Locale("pt", "BR");
-        NumberFormat realFormat = NumberFormat.getCurrencyInstance(brasil);
-        System.out.printf("Valor: %s\nTaxa: %.2f%%\n", realFormat.format(valor), taxa);
+        NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
+        System.out.printf("Valor: R$ %s\nTaxa: %.2f%%\n", format.format(valor).substring(1), taxa);
     }
 }
