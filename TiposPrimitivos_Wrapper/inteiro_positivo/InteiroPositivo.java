@@ -1,19 +1,19 @@
 public class InteiroPositivo {
-    private Integer valor;
+    private int valor;
 
-    public InteiroPositivo(int valor) throws Exception {
+    public InteiroPositivo(int valor) {
         validarValor(valor);
         this.valor = valor;
     }
 
-    public InteiroPositivo(String valor) throws Exception {
+    public InteiroPositivo(String valor) {
         validarValor(Integer.parseInt(valor));
         this.valor = Integer.parseInt(valor);
     }
 
-    public boolean validarValor(Integer valor) throws Exception {
+    public boolean validarValor(Integer valor) {
         if (valor < 0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         return true;
     }
