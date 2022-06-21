@@ -9,7 +9,7 @@ public class Numero {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } finally {
-            System.out.printf("%d / %d = %d", a, b, resultado);
+            System.out.printf("%d / %d = %d\n", a, b, resultado);
         }
     }
 }
