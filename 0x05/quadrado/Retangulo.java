@@ -1,5 +1,3 @@
-import retangulo.FormaGeometrica;
-
 public class Retangulo extends FormaGeometrica {
     protected double altura;
     protected double largura;
