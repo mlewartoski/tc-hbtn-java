@@ -1,7 +1,7 @@
 package exceptions;
 
 public class LivroInvalidoException extends Exception{
-    public LivroInvalidoException() {
-        super("Titulo de livro invalido");
+    public LivroInvalidoException(String msg) {
+        super(msg);
     }
 }
