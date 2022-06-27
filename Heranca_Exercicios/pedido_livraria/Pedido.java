@@ -1,5 +1,3 @@
-package pedido_livraria;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
