@@ -13,7 +13,7 @@ public class Livro extends Produto {
     }
     @Override
     public double obterPrecoLiquido() {
-        double acrescimo = (15*this.getPrecoBruto()/100);
+        double acrescimo = this.getPrecoBruto()*0.15;
         return this.getPrecoBruto()+acrescimo;
     }
 }

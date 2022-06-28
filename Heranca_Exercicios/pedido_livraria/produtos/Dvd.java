@@ -14,7 +14,7 @@ public class Dvd extends Produto {
 
     @Override
     public double obterPrecoLiquido() {
-        double acrescimo = (20*this.getPrecoBruto()/100);
+        double acrescimo = this.getPrecoBruto()*0.2;
         return this.getPrecoBruto()+acrescimo;
     }
 }

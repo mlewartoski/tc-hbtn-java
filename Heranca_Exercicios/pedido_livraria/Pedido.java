@@ -11,12 +11,12 @@ public class Pedido {
     }
     public double calcularTotal(){
         double valorTotal = 0;
+        double valorDesconto = 0;
         for (ItemPedido item:itens) {
             valorTotal += item.getQuantidade() * item.getProduto().obterPrecoLiquido();
         }
-        BigDecimal bd = new BigDecimal(Double.toString(valorTotal));
-        bd = bd.setScale(2, RoundingMode.HALF_DOWN);
-        valorTotal = bd.doubleValue();
-        return valorTotal-(percentualDesconto*valorTotal/100);
+        valorDesconto = valorTotal*(percentualDesconto/100);
+
+        return valorTotal-valorDesconto;
     }
 }
