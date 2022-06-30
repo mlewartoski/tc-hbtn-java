@@ -8,14 +8,21 @@ public class Telefone {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Telefone t = (Telefone) obj;
-        return this.toString().equals(t.toString());
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Telefone)) return false;
+
+        Telefone telefone = (Telefone) o;
+
+        if (!codigoArea.equals(telefone.codigoArea)) return false;
+        return numero.equals(telefone.numero);
     }
 
     @Override
     public int hashCode() {
-        return this.toString().hashCode();
+        int result = codigoArea.hashCode();
+        result = 5 * result + numero.hashCode();
+        return result;
     }
 
     @Override
