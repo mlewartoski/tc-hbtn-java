@@ -57,7 +57,7 @@ public class Banco {
                 if (imprimeTransacao){
                     transacaoIndex = 1;
                     for (Double transacao:c.getTransacoes()) {
-                        System.out.printf("\t[%d] valor %.2f\n", transacaoIndex++, transacao);
+                        System.out.printf("  [%d] valor %.2f\n", transacaoIndex++, transacao);
                     }
 
                 }

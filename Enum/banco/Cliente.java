@@ -10,7 +10,7 @@ public class Cliente implements Comparable {
         this.transacoes.add(transacaoInicial);
     }
 
-    public void adicionarTransacoes(double transacao){
+    public void adicionarTransacao(double transacao){
         this.transacoes.add(transacao);
     }
 

@@ -25,7 +25,7 @@ public class Agencia {
         Cliente c = new Cliente(nome, transacao);
         int posicao = this.clientes.indexOf(c);
         c = this.clientes.get(posicao);
-        c.adicionarTransacoes(transacao);
+        c.adicionarTransacao(transacao);
         return true;
     }
 
