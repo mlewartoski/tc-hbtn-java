@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Armazem<T> implements Armazenavel {
+public class Armazem<T> implements Armazenavel<T> {
     private Map<String, T> map;
 
     public Armazem() {
@@ -9,8 +9,8 @@ public class Armazem<T> implements Armazenavel {
     }
 
     @Override
-    public void adicionarAoInventario(String nome, Object elemento) {
-        map.put(nome, (T) elemento);
+    public void adicionarAoInventario(String nome, T elemento) {
+        map.put(nome, elemento);
     }
 
     @Override
